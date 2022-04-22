@@ -1,0 +1,31 @@
+Metadata summary for file Zoning
+
+
+MapInfo
+
+TableID:     81e4bbc4-4d15-4ee0-9424-7c0dabbb9868
+
+
+Description     County zoning developed during the 2012 comprehensive planning process.
+
+
+Source     Teton County, WY
+
+
+Contact     Teton County Planning Department  (307) 733-3959
+
+
+                    Entity and Attribute Information
+Entity Type Definition: Mapinfo Native
+Entity Type Definition Source:
+
+Field     Field                             Field               Field
+Field    Name                              Type                Length
+ 1        Zoning                            C                   12
+ 2        suffix                            C                   5
+ 3        LDRsection                        C                   75
+ 4        LDRpage                           C                   12
+ 5        newNotes                          C                   100
+ 6        Oldzoning                         C                   4
+ 7        nc                                C                   2
+ 8        notes                             C                   60

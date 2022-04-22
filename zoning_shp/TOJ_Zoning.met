@@ -1,0 +1,29 @@
+Metadata summary for file TOJ_Zoning
+
+
+MapInfo
+
+TableID:     47358324-38b1-432d-9cab-c2f405c8c56e
+
+
+description     Town of Jackson land use districts
+
+
+source     Town of Jackson, WY
+
+
+contact     Town of Jackson Planning Department (307) 733-0440
+
+
+                    Entity and Attribute Information
+Entity Type Definition: Mapinfo Native
+Entity Type Definition Source:
+
+Field     Field                             Field               Field
+Field    Name                              Type                Length
+ 1        Zoning                            C                   12
+ 2        suffix                            C                   12
+ 3        LDRsection                        C                   12
+ 4        LDRpage                           C                   12
+ 5        OldZoning                         C                   12
+ 6        Notes                             C                   100
