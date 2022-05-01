@@ -1,0 +1,36 @@
+Metadata summary for file JHLT_Protected_Properties
+
+
+MapInfo     Teton County Scenic Preserve Trust conservation easements
+
+TableID:     7a688c10-f320-48f9-ada9-10f6db160aed
+
+
+description     Jackson Hole Land Trust conservation easements
+
+
+source     Jackson Hole Land Trust
+
+
+contact     Jackson Hole Land Trust
+
+
+                    Entity and Attribute Information
+Entity Type Definition: Mapinfo Native
+Entity Type Definition Source:
+
+Field     Field                             Field               Field
+Field    Name                              Type                Length
+ 1        NAME                              C                   100
+ 2        ID                                C                   8
+ 3        RECORDING                         C                   100
+ 4        YRPROTECTE                        C                   12
+ 5        FEE_ESMNT                         C                   24
+ 6        LOCATION                          C                   60
+ 7        AMENDMENT                         C                   60
+ 8        HOMESITES                         C                   50
+ 9        NOTES                             C                   150
+10        GRANTOR                           C                   60
+11        BASELINE                          C                   22
+12        ENVELOPE                          C                   36
+13        ACREAGE                           D                   6, 1

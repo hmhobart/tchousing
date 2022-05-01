@@ -1,0 +1,33 @@
+Metadata summary for file USA
+
+
+description     United States of America conervation easements
+
+
+MapInfo     Jackson Hole Land Trust conservation easements
+
+TableID:     5ab4ced5-e4c0-4f29-8f04-91d690072824
+
+
+                    Entity and Attribute Information
+Entity Type Definition: Mapinfo Native
+Entity Type Definition Source:
+
+Field     Field                             Field               Field
+Field    Name                              Type                Length
+ 1        ID                                I
+ 2        Name                              C                   40
+ 3        Esmnt_No                          C                   12
+ 4        Fee_Esmnt                         C                   1
+ 5        Recording                         C                   18
+ 6        Document                          C                   7
+ 7        Amendment                         C                   60
+ 8        Density_Bonus                     C                   36
+ 9        Reserved_Homesites                C                   50
+10        Baseline                          C                   22
+11        Grantor                           C                   36
+12        Notes                             C                   80
+13        Location                          C                   60
+14        Recording_Date                    C                   8
+15        Building_Envelope                 C                   36
+16        Acreage                           D                   6, 1

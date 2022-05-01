@@ -1,0 +1,37 @@
+Metadata summary for file TCSPT
+
+
+description     Teton County Scenic Preserve Trust conservation easements
+
+
+MapInfo     US Fish and Wildlife conservation easement - assignement to JHLT doc 688303
+
+TableID:     1eeb6937-3182-4ebc-9811-6bd9c87d57ea
+
+
+source     Teton County, WY
+
+
+contact     gis@tetonwyo.org
+
+
+                    Entity and Attribute Information
+Entity Type Definition: Mapinfo Native
+Entity Type Definition Source:
+
+Field     Field                             Field               Field
+Field    Name                              Type                Length
+ 1        ID                                I
+ 2        Name                              C                   40
+ 3        Esmnt_No                          C                   12
+ 4        Fee_Esmnt                         C                   1
+ 5        Recording                         C                   18
+ 6        Document                          C                   7
+ 7        Amend_doc1                        C                   7
+ 8        Amendment                         C                   254
+ 9        Density_Bonus                     C                   36
+10        Reserved_Homesites                C                   50
+11        Baseline                          C                   60
+12        Grantor                           C                   36
+13        Notes                             C                   120
+14        Location                          C                   60

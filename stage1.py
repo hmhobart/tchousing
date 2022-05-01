@@ -57,10 +57,5 @@ out_file = 'stage1_zoning.gpkg'
 if os.path.exists(out_file):
     os.remove(out_file)
 
-tc_zoning.to_file(out_file, layer='tc_zoning')
+tc_zoning.to_file(out_file, layer='tc_zoning', index=False)
 
-
-
-# save to gpkg stage1_zoning.gpkg
-
-#then build second gpkg for stage2
