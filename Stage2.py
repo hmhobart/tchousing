@@ -25,7 +25,8 @@ roads = gpd.read_file('tl_2019_56_prisecroads.zip')
 parcels = gpd.read_file('ownership_shp/ownership.shp')
 
 #There are a variety of conservation entities in Jackson,
-# we will have to combine all of their shape files
+# we will have to combine all of their shape files so make sure they all have 
+# the same column names for the ones you want to keep.
 
 jhlt = gpd.read_file('conserv_esmnt/JHLT_Protected_Properties.shp')
 jhlt['Name'] = jhlt['NAME']
@@ -73,17 +74,22 @@ jh_buffer = jh.buffer(radius)
 def clip(input_list,buffer):
     clipped_list = []
     for l in input_list:
+        bad = (l.is_valid == False).sum()
+        if bad > 0:
+            print(f'{bad} invalid objects found' )
+            fixed = l.buffer(0)
+            l['geometry'] = fixed['geometry']
         clipped = l.clip(buffer, keep_geom_type=True)
         clipped_list.append(clipped)
     return clipped_list
 
-
+# put all the layers you want to clip in this list
 input_list = [county, roads, parcels, conserv, zoning]
 
 
 jh_clipped = clip(input_list, jh_buffer)
 
-# separating the layers
+# separating the layers from the resulting list of dataframes
 
 jh_county = jh_clipped[0]
 jh_roads = jh_clipped[1]
