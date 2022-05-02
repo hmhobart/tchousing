@@ -25,23 +25,31 @@ roads = gpd.read_file('tl_2019_56_prisecroads.zip')
 parcels = gpd.read_file('ownership_shp/ownership.shp')
 
 #There are a variety of conservation entities in Jackson,
-# we will have to combine all of their shape files so make sure they all have 
-# the same column names for the ones you want to keep.
+# we will have to combine all of their shape files 
 
 jhlt = gpd.read_file('conserv_esmnt/JHLT_Protected_Properties.shp')
-jhlt['Name'] = jhlt['NAME']
 nc = gpd.read_file('conserv_esmnt/NatureConserv.shp')
 tcspt = gpd.read_file('conserv_esmnt/TCSPT.shp')
 usa = gpd.read_file('conserv_esmnt/USA.shp')
 wgf = gpd.read_file('conserv_esmnt/WGF.shp')
-wgf['Name'] = wgf['NAME']
 
-keep_col = ['Name', 'geometry']
+#dictionaries to make sure Name columns are consistent
+name = {'name':'Name', 'NAME': 'Name'}
 
-conserv_list = [jhlt, nc, tcspt,usa, wgf]
 
-for v in conserv_list:
-    v = v[keep_col]
+#Trim the easement datasets to name & geometry, add the source, 
+#and align names column
+
+conserv_list = {'jhlt':jhlt, 'nc':nc, 'tcspt': tcspt, 
+                'usa': usa, 'wgf': wgf}
+
+for source,data in conserv_list.items():
+    data.rename(columns=name, inplace=True)
+    data['source'] = source
+    cols = data.columns
+    cols = [c for c in cols if c not in ['source', 'Name', 'geometry']]
+    data.drop(columns=cols, inplace= True)
+    
 
 conserv = pd.concat(conserv_list)
 
@@ -78,7 +86,7 @@ def clip(input_list,buffer):
         if bad > 0:
             print(f'{bad} invalid objects found' )
             fixed = l.buffer(0)
-            l['geometry'] = fixed['geometry']
+            l['geometry'] = fixed.geometry
         clipped = l.clip(buffer, keep_geom_type=True)
         clipped_list.append(clipped)
     return clipped_list
