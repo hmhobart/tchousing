@@ -50,7 +50,7 @@ for source,data in conserv_list.items():
     cols = [c for c in cols if c not in ['source', 'Name', 'geometry']]
     data.drop(columns=cols, inplace= True)
     
-
+#cobining all of the conservation easements to one dataset
 conserv = pd.concat(conserv_list)
 
 zoning = gpd.read_file('stage1_zoning.gpkg', layer = 'tc_zoning')
@@ -117,7 +117,6 @@ jh_roads.to_file(out_file, layer="roads", index=False)
 jh_parcels.to_file(out_file, layer="parcels", index=False)
 jh_conserv.to_file(out_file, layer="conserv", index=False)
 jh_zoning.to_file(out_file, layer="zoning", index=False)
-
 
 
 
