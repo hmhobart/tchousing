@@ -27,8 +27,9 @@ Files should be run in the order indicated by the stages.
 #
 
 # Scripts
-___Stage 1__
+__Stage 1__
 - creates the zoining layer and classifications needed for the following scripts.
+
 __Stage 2__
 - joins, reprojects, and clips all of the layers that are needed to create the geopackage that is analyzed in QGIS.
 - also includes relevant land area calculations that compare the types of land and the mean cost of a parcel in the valley.
