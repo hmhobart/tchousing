@@ -26,6 +26,16 @@ These can be adjusted based on the assumptions made about the zones, 1 indicates
 Files should be run in the order indicated by the stages.
 #
 
+# Scripts
+___Stage 1__
+- creates the zoining layer and classifications needed for the following scripts
+__Stage 2__
+- joins, reprojects, and clips all of the layers that are needed to create the geopackage that is analyzed in QGIS
+__Stage 3__
+- ?
+
+
+*** 
 # Outputs
 These scripts create a geopackage that can identify areas that are zoned for higher density
 development in Teton County. It can also give an idea of what the value of these developbable areass is. 
@@ -39,7 +49,7 @@ This map shows the areas in Jackson Hole that are tagged as developable and cons
 
 ## Map 2
 This map is a heat map of the value of each parcel of land. The 3rd stage of these scripts identify the mean parcel value being greater than $1.8M, and when compared, Maps 1 & 2 indicate 
-significant overlap in the most expensive regions of the valley. 
+significant overlap in the most expensive regions of the valley. This heat map was created using the acctval variable in the parcel layer attribute table.
 
 ![alt text](https://github.com/hmhobart/tchousing/blob/main/heatmap.png 'Jackson Hole Pricing')
 

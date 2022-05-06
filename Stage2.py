@@ -119,6 +119,24 @@ jh_parcels.to_file(out_file, layer="parcels", index=False)
 jh_conserv.to_file(out_file, layer="conserv", index=False)
 jh_zoning.to_file(out_file, layer="zoning", index=False)
 
+#%% Land area calculations
+
+#m^2 to acres conversion
+conversion = 0.000247105
+
+# area of conserved areas in Jackson
+area_conserv = ((jh_conserv.area.sum())*conversion).round(2)
+
+print(f'The total area of conserved land in Jackson Hole is {area_conserv} acres')
+
+# area of potetially developable zones
+resdev = jh_zoning.query('resdev>=1')
+area_resdev = ((resdev.area.sum())*conversion).round(2)
+print(f'The total area of potentially developable land in Jackson Hole is {area_resdev} acres')
+
+#mean acctval or value of a piece of land with or without a structure on it
+print(jh_parcels['acctval'].mean())
+
 
 
 
