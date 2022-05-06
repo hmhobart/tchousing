@@ -28,17 +28,16 @@ Files should be run in the order indicated by the stages.
 
 # Scripts
 ___Stage 1__
-- creates the zoining layer and classifications needed for the following scripts
+- creates the zoining layer and classifications needed for the following scripts.
 __Stage 2__
-- joins, reprojects, and clips all of the layers that are needed to create the geopackage that is analyzed in QGIS
-__Stage 3__
-- ?
+- joins, reprojects, and clips all of the layers that are needed to create the geopackage that is analyzed in QGIS.
+- also includes relevant land area calculations that compare the types of land and the mean cost of a parcel in the valley.
 
 
 *** 
 # Outputs
 These scripts create a geopackage that can identify areas that are zoned for higher density
-development in Teton County. It can also give an idea of what the value of these developbable areass is. 
+development in Teton County. It can also give an idea of what the value of these developbable areas is. 
 This is pictured in the maps included below.
 
 ## Map 1
