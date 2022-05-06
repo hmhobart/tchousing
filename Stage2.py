@@ -38,7 +38,7 @@ name = {'name':'Name', 'NAME': 'Name'}
 
 
 #Trim the easement datasets to name & geometry, add the source, 
-#and align names column
+#and align names column for a cohesive data set
 
 conserv_list = {'jhlt':jhlt, 'nc':nc, 'tcspt': tcspt, 
                 'usa': usa, 'wgf': wgf}
@@ -50,7 +50,7 @@ for source,data in conserv_list.items():
     cols = [c for c in cols if c not in ['source', 'Name', 'geometry']]
     data.drop(columns=cols, inplace= True)
     
-#cobining all of the conservation easements to one dataset
+#combining all of the conservation easements to one dataset
 conserv = pd.concat(conserv_list)
 
 zoning = gpd.read_file('stage1_zoning.gpkg', layer = 'tc_zoning')
@@ -74,7 +74,7 @@ print( parcels.crs)
 #distance in meters that the bufffer around Jackson will be
 radius = 25000
 
-#create buffer layer
+#create buffer layer that wil clip each layer to the area we are examining
 jh_buffer = jh.buffer(radius)
 
 #%% Using the buffer to define the area in the rest of the layers
@@ -97,7 +97,8 @@ input_list = [county, roads, parcels, conserv, zoning]
 
 jh_clipped = clip(input_list, jh_buffer)
 
-# separating the layers from the resulting list of dataframes
+# separating the layers from the resulting list of dataframes, so that you 
+# end up with unique layers instead of a single layer
 
 jh_county = jh_clipped[0]
 jh_roads = jh_clipped[1]
@@ -105,7 +106,7 @@ jh_parcels = jh_clipped[2]
 jh_conserv = jh_clipped[3]
 jh_zoning = jh_clipped[4]
 
-#%% Building the geopackage
+#%% Building the geopackage -- the rest of this data will be changed in QGIS
 
 out_file = 'stage2_jh.gpkg'
 
