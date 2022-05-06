@@ -13,7 +13,7 @@ Teton County, WY GIS archives.
 Census: https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2020&layergroup=Counties+%28and+equivalent%29
 - You will need to dowload county, and road data from the census.
 
-Teton County:https://www.greenwoodmap.com/tetonwy/mapserver/download/download.html?
+Teton County: https://www.greenwoodmap.com/tetonwy/mapserver/download/download.html?
 - You will need to download the zoning, ownership, and conservation easements packages from this archive.
 
 The census files can remain zipped, however, each of the Teton County files 
@@ -32,13 +32,14 @@ development in Teton County. It can also give an idea of what the value of these
 This is pictured in the maps included below.
 
 ## Map 1
+This map shows the areas in Jackson Hole that are tagged as developable and conserved as indicated in the legend. There is a closer look at the town of Jackson included in the file as well. 
 
 ![alt text](https://github.com/hmhobart/tchousing/blob/main/county_zoning.png 'Jackson Hole Zoning')
 
-This map shows the areas in Jackson Hole that are tagged as developable and conserved as indicated in the legend. There is a closer look at the town of Jackson included in the file as well. 
 
 ## Map 2
-![alt text](https://github.com/hmhobart/tchousing/blob/main/heatmap.png 'Jackson Hole Pricing')
-
 This map is a heat map of the value of each parcel of land. The 3rd stage of these scripts identify the mean parcel value being greater than $1.8M, and when compared, Maps 1 & 2 indicate 
 significant overlap in the most expensive regions of the valley. 
+
+![alt text](https://github.com/hmhobart/tchousing/blob/main/heatmap.png 'Jackson Hole Pricing')
+
