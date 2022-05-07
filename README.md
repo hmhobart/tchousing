@@ -10,7 +10,7 @@ The main findings were that there are just over 7,000 acres of potentially devel
 assumptions, an there are just under 22,000 acres in conservation easements. This highlights the scarcity of available land in the area.
  There is a significant overlap between the developable areas in Jackson and the more expensive parcels
   of land. The mean value of a parcel in this analysis is $1.8 million, this could be skewed by the inclusion of various entities in the valley, 
-but it still highlights the issue of affordability on Jackson Hole.
+but it still highlights the issue of affordability in Jackson Hole.
 #
 # Files
 This project utilizes files from various sources including the Census, and the 
