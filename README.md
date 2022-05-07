@@ -6,8 +6,8 @@ This project was built to help identify areas that could be targeted to
 increase community and workforce housing in the Jackson Hole area. It also shows 
 the area of the valley that is in conservation easements and not available for development in the future. 
 
-The main findings were that there are just over 7,000 acres of potentially developable land under my current
-assumptions, an there are just under 22,000 acres in conservation easements. This highlights the scarcity of available land in the area.
+Tis analysis found that there are just over 7,000 acres of potentially developable land under my current
+assumptions, and there are just under 22,000 acres in conservation easements. This highlights the scarcity of available land in the area.
  There is a significant overlap between the developable areas in Jackson and the more expensive parcels
   of land. The mean value of a parcel in this analysis is $1.8 million, this could be skewed by the inclusion of various entities in the valley, 
 but it still highlights the issue of affordability in Jackson Hole.
@@ -17,7 +17,7 @@ This project utilizes files from various sources including the Census, and the
 Teton County, WY GIS archives. 
 
 Census: https://www.census.gov/cgi-bin/geo/shapefiles/index.php?year=2020&layergroup=Counties+%28and+equivalent%29
-- You will need to dowload county, and road data from the census.
+- You will need to download county, and road data from the census.
 
 Teton County: https://www.greenwoodmap.com/tetonwy/mapserver/download/download.html?
 - You will need to download the zoning, ownership, and conservation easements packages from this archive.
@@ -34,7 +34,7 @@ Files should be run in the order indicated by the stages.
 
 # Scripts
 __Stage 1__
-- creates the zoining layer and classifications needed for the following scripts.
+- creates the zoning layer and classifications needed for the following scripts.
 
 __Stage 2__
 - joins, reprojects, and clips all of the layers that are needed to create the geopackage that is analyzed in QGIS.
@@ -55,7 +55,7 @@ This map shows the areas in Jackson Hole that are tagged as developable and cons
 
 ## Map 2
 This map is a heat map of the value of each parcel of land. The 3rd stage of these scripts identify the mean parcel value being greater than $1.8M, and when compared, Maps 1 & 2 indicate 
-significant overlap in the most expensive regions of the valley. This heat map was created using the acctval variable in the parcel layer attribute table.
+significant overlap in the most expensive regions of the valley. This heat map was created using the 'acctval' variable in the parcel layer attribute table.
 
 ![alt text](https://github.com/hmhobart/tchousing/blob/main/heatmap.png 'Jackson Hole Pricing')
 
