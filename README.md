@@ -6,7 +6,7 @@ This project was built to help identify areas that could be targeted to
 increase community and workforce housing in the Jackson Hole area. It also shows 
 the area of the valley that is in conservation easements and not available for development in the future. 
 
-Tis analysis found that there are just over 7,000 acres of potentially developable land under my current
+This analysis found that there are just over 7,000 acres of potentially developable land under my current
 assumptions, and there are just under 22,000 acres in conservation easements. This highlights the scarcity of available land in the area.
  There is a significant overlap between the developable areas in Jackson and the more expensive parcels
   of land. The mean value of a parcel in this analysis is $1.8 million, this could be skewed by the inclusion of various entities in the valley, 
